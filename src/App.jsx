@@ -8,7 +8,7 @@ function App() {
       </nav>
       <main className="flex-1 flex flex-col items-center justify-center text-center px-6 pb-12">
         <h1 className="text-5xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-          SPACE_NAME
+          markluce-fun
         </h1>
         <p className="mt-4 text-slate-400">Welcome to my space</p>
       </main>

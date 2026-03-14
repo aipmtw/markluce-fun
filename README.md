@@ -1,4 +1,4 @@
-# SPACE_NAME
+# markluce-fun
 
 > Member space on [aipm.com.tw](https://aipm.com.tw/)
 
@@ -6,8 +6,8 @@
 
 This is your personal space. Submit issues to request changes — they'll be processed automatically.
 
-- Website: https://aipm.com.tw/SPACE_NAME/
-- Submit requests: [Create Issue](https://github.com/aipmtw/SPACE_NAME/issues/new)
+- Website: https://aipm.com.tw/markluce-fun/
+- Submit requests: [Create Issue](https://github.com/aipmtw/markluce-fun/issues/new)
 
 ## Tech Stack
 
