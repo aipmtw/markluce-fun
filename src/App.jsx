@@ -25,15 +25,21 @@ function Auth({ onAuth }) {
       const { error } = await supabase.auth.signInWithPassword({ email, password })
       if (error) setError(error.message)
     } else {
-      const { error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signUp({
         email, password,
         options: {
           data: { display_name: displayName || email.split('@')[0] },
           emailRedirectTo: window.location.origin + window.location.pathname
         }
       })
-      if (error) setError(error.message)
-      else setError('註冊成功！請查收驗證信件。')
+      if (error) {
+        setError(error.message)
+      } else if (data?.user?.identities?.length === 0) {
+        setError('此 Email 已註冊，請直接登入。')
+        setMode('login')
+      } else {
+        setError('註冊成功！請查收驗證信件。')
+      }
     }
     setLoading(false)
   }
