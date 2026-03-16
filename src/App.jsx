@@ -27,7 +27,10 @@ function Auth({ onAuth }) {
     } else {
       const { error } = await supabase.auth.signUp({
         email, password,
-        options: { data: { display_name: displayName || email.split('@')[0] } }
+        options: {
+          data: { display_name: displayName || email.split('@')[0] },
+          emailRedirectTo: window.location.origin + window.location.pathname
+        }
       })
       if (error) setError(error.message)
       else setError('註冊成功！請查收驗證信件。')
